@@ -93,7 +93,7 @@ function Planet() {
         this.power = Math.sqrt((this.id+1)*this.isBoss?1.5:1);
         this.atmo = this.maxAtmo = precision3(this.power*100 * difficulty);
         this.health = this.maxHealth = precision3(this.power*1000 * difficulty);
-        this.dirt = precision3(this.power*2000);
+        this.dirt = precision3(this.power*2000 * (difficulty));
 
         this.mineTicksMax = Math.floor(Math.sqrt(this.dirt)*40);
         this.factoryTicksMax = Math.floor(Math.sqrt(this.dirt)*200);
